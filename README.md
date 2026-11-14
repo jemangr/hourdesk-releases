@@ -5,8 +5,8 @@
 <h1 align="center">HourDesk</h1>
 
 <p align="center">
-  <b>White-Label Prepaid Support Hours, Live VoIP Screen Pop &amp; Field Service Platform</b><br>
-  Πλατφόρμα Διαχείρισης Προαγορασμένων Ωρών Υποστήριξης, VoIP Screen Pop &amp; Επιτόπιων Επισκέψεων
+  <b>White-Label Prepaid Support Hours, Live VoIP Screen Pop, Field Service Platform &amp; Android App</b><br>
+  Πλατφόρμα Διαχείρισης Προαγορασμένων Ωρών Υποστήριξης, VoIP Screen Pop &amp; Επιτόπιων Επισκέψεων με Εφαρμογή Android
 </p>
 
 <p align="center">
