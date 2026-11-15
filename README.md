@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-v1.4.0%20Wave%204-2563EB?style=for-the-badge" alt="Version v1.4.0">
+  <img src="https://img.shields.io/badge/Version-v1.5.0%20Release-2563EB?style=for-the-badge" alt="Version v1.5.0">
   <img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-1E293B?style=for-the-badge" alt="All Rights Reserved">
   <img src="https://img.shields.io/badge/Languages-EL%20%7C%20EN-0F766E?style=for-the-badge" alt="Greek and English">
 </p>
@@ -52,7 +52,10 @@ It runs as **3 independent modular suites** (separately or combined into one uni
   - **Automatic Greek VAT Lookup** (`AADE RgWsPublic2` &amp; `GEMI OpenData`) inside both client editing and Quick New Client creation.
   - **AADE myDATA XML v1.0 e-Invoicing**, consolidated Billing Queue, and PDF/XLSX P&amp;L profitability reports.
 - **Client Portal, Quotes, SLA &amp; Operations**:
-  - **Interactive Quotes / Proposals**: Public client approval link, PDF export, and conversion to work/packages/contracts.
+  - **Interactive Quotes / Proposals**: Public client approval link with **HTML5 Digital Signature Pad & IP capture**, PDF export, and 1-click conversion into work, packages, contracts, or recurring subscriptions.
+  - **Billing Queue & Recurring Subscriptions**: Pending/overdue/15-day-upcoming subscriptions are queued alongside time entries & contracts for consolidated AADE myDATA e-Invoicing and auto-renewal.
+  - **System Health & Snapshots**: Live PostgreSQL, Redis, storage & license health check plus manual/daily automated JSON backup snapshots.
+  - **Unified Global Search (`Ctrl+K`)**: Role-scoped & module-aware search across clients, contacts, assets, tasks, contracts, subscriptions, and inventory SKUs.
   - **SLA &amp; Greek Public Holidays**: Business hours vs 24/7 SLA schedules per client with retroactive recalculation.
   - **Read-Only Client Portal** (with global &amp; per-client kill-switch), **AES-256-GCM Encrypted Credential Vault**, **RMM Webhook Alerts**, **SMS / Viber Gateway** (`Apifon`, `Yuboto`, `Routee`, `Twilio`) with setup guide, **14 Industry Vertical Templates**, **RBAC**, and **Ed25519 License Protection**.
 
@@ -88,15 +91,18 @@ This public repository is the official feature showcase and release distribution
 ### Κύριες Λειτουργίες &amp; Ενσωματώσεις
 
 - **Ζωντανό VoIP Screen Pop (`3CX v18/v20` &amp; `Yeastar`)**: Ακαριαία αναγνώριση E.164, διπλές σημειώσεις (Πελάτη &amp; Εσωτερική), δημιουργία ανοιχτού Task με **checkbox Ημ. Λήξης (`Due Date`) &amp; Απαίτηση Πελάτη**, και inline επεξεργασία ημερομηνιών.
-- **Εφαρμογή Android (Native Kotlin + Jetpack Compose + Room)**: Dual-SIM καταγραφή εταιρικών κλήσεων, ειδοποιήσεις αναπάντητων, offline βάση, GPS check-in, ψηφιακή υπογραφή πελάτη, QR scanner, έξοδα πεδίου (με επιλογή `€0 — Εκκρεμεί τιμή`) και δυναμική απόκρυψη πεδίων ανά module.
+- **Εφαρμογή Android (Native Kotlin + Jetpack Compose + Room)**: Dual-SIM καταγραφή εταιρικών κλήσεων, ειδοποιήσεις αναπάντητων, offline βάση, **σύνοψη ενεργών συμβάσεων & συνδρομών ανά πελάτη**, GPS check-in, **επισύναψη φωτογραφίας επίσκεψης**, ψηφιακή υπογραφή πελάτη, QR scanner, έξοδα πεδίου (με επιλογή `€0 — Εκκρεμεί τιμή`) και δυναμική απόκρυψη πεδίων ανά module.
 - **Ελληνική Φορολογική &amp; Επιχειρησιακή Συμμόρφωση:**
   - **Καθολική Ρύθμιση ΦΠΑ (Καθαρές vs Μεικτές Τιμές με ΦΠΑ)** παντού σε φόρμες, πίνακες και αναφορές.
   - **Αυτόματη Αναζήτηση ΑΦΜ (ΑΑΔΕ RgWsPublic2 &amp; ΓΕΜΗ OpenData)** απευθείας και στη γρήγορη προσθήκη νέου πελάτη.
-  - **Ηλεκτρονική Τιμολόγηση ΑΑΔΕ myDATA (XML v1.0)**, Ουρά Τιμολόγησης και Αναφορές Κερδοφορίας (P&amp;L) ανά πελάτη, σύμβαση και τεχνικό σε Excel/PDF.
+  - **Ηλεκτρονική Τιμολόγηση ΑΑΔΕ myDATA (XML v1.0)**, ενιαία Ουρά Τιμολόγησης (ώρες, έξοδα, συμβάσεις &amp; **συνδρομές** με αυτόματη ανανέωση) και Αναφορές Κερδοφορίας (P&amp;L) ανά πελάτη, σύμβαση και τεχνικό σε Excel/PDF.
 - **Ολοκληρωμένο Operations Suite:**
-  - **Προσφορές (Quotes)** με δημόσιο link έγκρισης &amp; PDF.
+  - **Προσφορές (Quotes)** με δημόσιο link έγκρισης, **καμβά ψηφιακής υπογραφής πελάτη**, PDF &amp; μετατροπή σε συνδρομή/σύμβαση/πακέτο.
+  - **Ενιαία Καθολική Αναζήτηση (`Ctrl+K`)** με έλεγχο δικαιωμάτων &amp; ενεργών modules (συμπεριλαμβανομένων Συνδρομών &amp; Αποθήκης).
+  - **System Health Check &amp; Backups** (live έλεγχος PostgreSQL/Redis/Storage/Άδειας, αυτόματο ημερήσιο snapshot &amp; λήψη `.json`).
+  - **Εκκρεμότητες Κόστους (€0 Inbox)** με δυνατότητα σύνδεσης &amp; αυτόματης αφαίρεσης αποθέματος Αποθήκης κατά την κοστολόγηση γραφείου.
   - **Εργάσιμο Ωράριο SLA &amp; Ελληνικές Αργίες** με default πολιτική και **αναδρομικό υπολογισμό ανά πελάτη**.
   - **SMS / Viber Gateway** (`Apifon`, `Yuboto`, `Routee`, `Twilio`) με ενσωματωμένο αναλυτικό οδηγό ρυθμίσεων.
-  - **Πύλη Πελάτη (Read-Only Portal)** με δυνατότητα απενεργοποίησης γενικά αλλά και ανά πελάτη, **Κρυπτογραφημένο Vault (`AES-256-GCM`)**, **RMM Alerts**, **14 Προφίλ Κλάδων**, **RBAC ανά τεχνικό**, **Ed25519 License Protection** και **Full Demo Dataset** (με επιλογή μόνιμης διαγραφής μόνο των demo εγγραφών).
+  - **Πύλη Πελάτη (Read-Only Portal)** με δυνατότητα απενεργοποίησης γενικά αλλά και ανά πελάτη, **Κρυπτογραφημένο Vault (`AES-256-GCM`)**, **RMM Alerts**, **14 Προφίλ Κλάδων**, **RBAC ανά τεχνικό**, **Ed25519 License Protection** (με απομακρυσμένο **Push License Online** από την κονσόλα Vendor) και **Full Demo Dataset** (με επιλογή μόνιμης διαγραφής μόνο των demo εγγραφών).
 
 © 2026 jemangr (Giannis Oikonomakis). All rights reserved.
