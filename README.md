@@ -23,6 +23,14 @@
 
 <a id="english"></a>
 
+## 📱 Εφαρμογή κινητού τεχνικών / Technician mobile app
+
+**Λήψη / Download:** [HourDesk.apk — τελευταία έκδοση / latest release](https://github.com/jemangr/hourdesk-releases/releases/latest/download/HourDesk.apk)
+
+- Η εφαρμογή Android είναι **μέρος πληρωμένου πακέτου HourDesk** και λειτουργεί μόνο μετά από ενεργοποίηση με τον κωδικό QR που δίνει ο διαχειριστής της εταιρείας σας (Ρυθμίσεις → Χρήστες → «Σύζευξη κινητού»). Χωρίς ενεργοποίηση δεν κάνει τίποτα.
+- The Android app is **part of a paid HourDesk package** and works only after activation with the QR code from your company's administrator. Without activation it does nothing.
+- Κάθε έκδοση περιέχει `HourDesk.apk` και `version.json` (`versionCode`, `versionName`, `sha256`). Οι εγκαταστάσεις HourDesk την κατεβάζουν και την ελέγχουν μόνες τους. / Each release ships `HourDesk.apk` and `version.json`; HourDesk installations download and verify it themselves.
+
 ## English Overview
 
 **HourDesk** is a turnkey commercial white-label platform built for **IT / MSP providers, Electrical &amp; Plumbing contractors, Security/CCTV teams, HVAC/Solar engineers, Accounting/Legal offices, and Technical Service companies**.
